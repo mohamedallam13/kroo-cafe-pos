@@ -10,6 +10,24 @@ A modern, web-based Point of Sale (POS) system built with Google Apps Script, de
 - 🛒 Real-time order management
 - 📊 Basic sales tracking
 
+## Screenshots
+
+### Main POS Interface
+![Main POS Interface](screenshots/main-interface.png)
+*The main POS interface showing the product grid and order panel*
+
+### Mobile View
+![Mobile View](screenshots/mobile-view.png)
+*Responsive design optimized for mobile devices*
+
+### Category Navigation
+![Category Navigation](screenshots/categories.png)
+*Easy category-based product navigation*
+
+### Order Management
+![Order Management](screenshots/order-management.png)
+*Real-time order management and processing*
+
 ## Technical Stack
 
 - Frontend: HTML5, CSS3, JavaScript
