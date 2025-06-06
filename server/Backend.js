@@ -21,7 +21,7 @@
   const paymentAccounts = {
     cash: "KROO-SAFE-KORBA-1",
     card: "GEIDEA-1",
-    instapay: "BANK-CIB-141907"
+    instapay: "KROOCC-INSTAPAY"
   }
 
   const paymentTypes = {
