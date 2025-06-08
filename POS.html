@@ -1110,7 +1110,7 @@ function renderMenuItems() {
         const element = document.createElement('div');
         element.className = 'menu-item';
         element.innerHTML = `
-            <img src="${item.imageURI}" alt="${item.name}">
+            <img src="${item.image}" alt="${item.name}">
             <div>${item.name}</div>
             <div>EGP ${item.price.toFixed(2)}</div>
         `;
