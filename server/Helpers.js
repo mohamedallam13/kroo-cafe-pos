@@ -43,7 +43,7 @@
     // You can now use this data URI as needed in your application
   }
 
-  function convertDriveUrlToDirectImage(driveUrl) {
+  function convertDriveUrlToDirectImageUrl(driveUrl) {
     // Regular expression to extract the file ID from various Google Drive URL formats
     const regex = /\/d\/([a-zA-Z0-9_-]+)\/|id=([a-zA-Z0-9_-]+)/;
     const match = driveUrl.match(regex);
@@ -107,7 +107,7 @@
     convertImageToDataUri,
     getWhatsappLink,
     getEmailLink,
-    convertDriveUrlToDirectImage,
+    convertDriveUrlToDirectImageUrl,
     encodeParams,
     decodeParams,
     generateLink
