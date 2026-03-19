@@ -1,94 +1,97 @@
-# KROO Simple Cashier
+# KROO Simple Cashier — Cafe POS
 
-A modern, web-based Point of Sale (POS) system built with Google Apps Script, designed for cafes and small businesses. This system provides a clean, intuitive interface for managing sales, inventory, and transactions.
+A web-based Point of Sale (POS) system for KROO Cafe built on Google Apps Script. Provides a category-based product grid, real-time cart management, and Google Sheets–backed order tracking.
+
+![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=flat&logo=google&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-WebApp-blue)
+![Status](https://img.shields.io/badge/Status-Production-green)
+
+---
 
 ## Features
 
-- 🛍️ Modern, responsive user interface
-- 📱 Mobile-friendly design
-- 🏷️ Category-based product organization
-- 🛒 Real-time order management
-- 📊 Basic sales tracking
+- Category-based product grid for fast item selection
+- Real-time cart with quantity management and order totals
+- Order submission written directly to Google Sheets
+- Email confirmation on order completion
+- Mobile-friendly, responsive layout
 
-## Screenshots
+---
 
-### Main POS Interface
-![Main POS Interface](screenshots/main-interface.png)
-*The main POS interface showing the product grid and order panel*
+## Tech Stack
 
-### Mobile View
-![Mobile View](screenshots/mobile-view.png)
-*Responsive design optimized for mobile devices*
+| Layer    | Technology                      |
+|----------|---------------------------------|
+| Platform | Google Apps Script              |
+| UI       | HTML5, CSS3, Vanilla JavaScript |
+| Database | Google Sheets                   |
+| Deploy   | clasp CLI                       |
 
-### Category Navigation
-![Category Navigation](screenshots/categories.png)
-*Easy category-based product navigation*
-
-### Order Management
-![Order Management](screenshots/order-management.png)
-*Real-time order management and processing*
-
-## Technical Stack
-
-- Frontend: HTML5, CSS3, JavaScript
-- Backend: Google Apps Script
-- Storage: Google Sheets
-- Authentication: Google OAuth
+---
 
 ## Project Structure
 
 ```
-├── POS.html              # Main POS interface
-├── POS-Functioning.html  # Enhanced POS functionality
-├── server/
-│   ├── Server.js        # Main server logic
-│   ├── Backend.js       # Backend operations
-│   ├── Helpers.js       # Utility functions
-│   ├── Middleware.js    # Request middleware
-│   └── env.js           # Environment configuration
-└── appsscript.json      # Apps Script manifest
+kroo-cafe-pos/
+├── README.md
+├── AGENT.md
+├── .gitignore
+└── src/
+    ├── env.js                       # Sheet IDs and config
+    ├── Backend.js                   # Data access layer (Sheets read/write)
+    ├── Helpers.js                   # Pure utility functions
+    ├── Middleware.js                # Server-side routing
+    ├── Server.js                    # doGet() / doPost() entry points
+    ├── Email Login Confirmation.js  # Email helper
+    ├── POS.html                     # Main POS UI shell
+    └── POS-Functioning.html         # POS client-side logic
 ```
 
-## Setup
+---
 
-1. Clone this repository
-2. Install the Google Apps Script CLI (clasp):
+## Getting Started
+
+### Prerequisites
+
+- A Google account with Google Apps Script access
+- [clasp](https://github.com/google/clasp) installed globally
+
+```bash
+npm install -g @google/clasp
+clasp login
+```
+
+### Setup
+
+1. Clone the repository:
    ```bash
-   npm install -g @google/clasp
+   git clone https://github.com/mohamedallam13/kroo-cafe-pos.git
+   cd kroo-cafe-pos
    ```
-3. Login to clasp:
+
+2. Link to your Apps Script project:
    ```bash
-   clasp login
-   ```
-4. Pull the project:
-   ```bash
-   clasp pull
+   clasp create --type webapp --title "KROO Cafe POS" --rootDir src
    ```
 
-## Development
-
-To make changes to the project:
-
-1. Edit the files locally
-2. Push changes using:
+3. Push source files:
    ```bash
    clasp push
    ```
 
+4. Set the Sheet ID in `env.js`.
+
+---
+
 ## Deployment
 
-The project is deployed as a Google Apps Script web app. To deploy:
+1. In the Apps Script editor, go to **Deploy > New deployment**
+2. Select type: **Web app**
+3. Set **Execute as**: Me · **Who has access**: Anyone
+4. Click **Deploy** and share the Web App URL with staff
 
-1. Open the project in the Google Apps Script editor
-2. Click "Deploy" > "New deployment"
-3. Choose "Web app" as the deployment type
-4. Configure the deployment settings
-5. Deploy and authorize the application
+---
 
-## License
+## Author
 
-This project is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.
-
-## Support
-
-For support and inquiries, please contact the development team. 
+**Mohamed Allam** — [GitHub](https://github.com/mohamedallam13) · [Email](mailto:mohamedallam.tu@gmail.com)
