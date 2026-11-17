@@ -43,7 +43,7 @@
   function submitOrder(order) {
     console.log(order)
     const { paymentMethod } = order
-    timestamp = timestampCreate(undefined, "MM/dd/YYYY HH:mm:ss")
+    timestamp = timestampCreate(undefined, "MM/dd/yyyy HH:mm:ss")
     console.log(order.accountEmail)
     try {
       getOrdersSheet()
